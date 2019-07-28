@@ -12,8 +12,6 @@ namespace Tsmp.User.Domain.PasswordAggregate
 
         public string Hash { get; set; }
 
-        public string Salt { get; set; }
-
         public DateTime CreatedDate { get; set; }
     }
 }
