@@ -1,11 +1,8 @@
 ﻿using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
-using Tsmp.User.Domain.PasswordAggregate;
+using Tsmp.User.Domain;
 using Tsmp.User.Domain.Services;
 
 namespace Tsmp.User.API.Commands

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Tsmp.User.Domain.Services
+﻿namespace Tsmp.User.Domain.Services
 {
     public interface IPasswordHelper
     {

@@ -1,10 +1,8 @@
 ﻿using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tsmp.User.Domain.UserAggregate;
+using Tsmp.User.Domain;
 
 namespace Tsmp.User.API.Commands
 {
