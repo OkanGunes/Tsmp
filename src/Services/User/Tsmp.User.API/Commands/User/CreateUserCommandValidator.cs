@@ -1,14 +1,28 @@
 ﻿using FluentValidation;
+using System.Threading.Tasks;
+using Tsmp.User.Domain;
 
 namespace Tsmp.User.API.Commands
 {
     public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
     {
-        public CreateUserCommandValidator()
+        public CreateUserCommandValidator(IUserRepository userRepository)
         {
             RuleFor(x => x.Email)
                 .NotEmpty()
-                .EmailAddress();
+                .EmailAddress()
+                .DependentRules(() =>
+                {
+                    RuleFor(x => x.Email).CustomAsync(async (email, context, cancellationToken) =>
+                    {
+                        var isExist = await userRepository.AnyAsync(x => x.Email.ToLowerInvariant() == email.ToLowerInvariant(), cancellationToken);
+
+                        if (isExist)
+                        {
+                            context.AddFailure(nameof(UserEntity.Email), "Email is already registered");
+                        }
+                    });
+                });
 
             RuleFor(x => x.Name)
                 .NotEmpty()

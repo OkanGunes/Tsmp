@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 
 namespace Tsmp.User.Domain
 {
     public interface IPasswordRepository
     {
-        Task CreatePassword(PasswordEntity passwordEntity);
+        Task CreatePasswordAsync(PasswordEntity passwordEntity, CancellationToken cancellationToken = default);
     }
 }

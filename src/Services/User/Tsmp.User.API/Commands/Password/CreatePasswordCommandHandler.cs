@@ -28,7 +28,7 @@ namespace Tsmp.User.API.Commands
                 UserId = request.UserId
             };
 
-            await _passwordRepository.CreatePassword(passwordEntity);
+            await _passwordRepository.CreatePasswordAsync(passwordEntity, cancellationToken);
 
             return passwordEntity.Id;
         }

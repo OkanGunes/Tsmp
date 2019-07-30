@@ -15,9 +15,7 @@ namespace Tsmp.User.API.Controllers
         [HttpPost]
         public async Task<ActionResult> PostUser([FromBody]CreateUserCommand createUserCommand)
         {
-            await _mediator.Send(createUserCommand);
-
-            return Ok();
+            return Ok(await _mediator.Send(createUserCommand));
         }
     }
 }

@@ -1,4 +1,7 @@
 ﻿using MongoDB.Driver;
+using System;
+using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Tsmp.User.Domain;
 
@@ -15,9 +18,9 @@ namespace Tsmp.User.Infrastructure
             _mongoCollection = _mongoDatabsae.GetCollection<PasswordEntity>("Password");
         }
 
-        public Task CreatePassword(PasswordEntity passwordEntity)
+        public Task CreatePasswordAsync(PasswordEntity passwordEntity, CancellationToken cancellationToken = default)
         {
-            return _mongoCollection.InsertOneAsync(passwordEntity);
+            return _mongoCollection.InsertOneAsync(passwordEntity, cancellationToken: cancellationToken);
         }
     }
 }

@@ -28,13 +28,13 @@ namespace Tsmp.User.API.Commands
                 Surname = request.Surname
             };
 
-            await _userRepository.CreateUser(userEntity);
+            await _userRepository.CreateUserAsync(userEntity, cancellationToken);
 
             await _mediator.Send(new CreatePasswordCommand
             {
                 Password = request.Password,
                 UserId = userEntity.Id
-            });
+            }, cancellationToken);
 
             return userEntity.Id;
         }

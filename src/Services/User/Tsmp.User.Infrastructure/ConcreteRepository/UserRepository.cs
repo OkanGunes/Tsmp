@@ -1,4 +1,7 @@
 ﻿using MongoDB.Driver;
+using System;
+using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Tsmp.User.Domain;
 
@@ -15,9 +18,14 @@ namespace Tsmp.User.Infrastructure
             _mongoCollection = _mongoDatabsae.GetCollection<UserEntity>("User");
         }
 
-        public Task CreateUser(UserEntity userEntity)
+        public Task<bool> AnyAsync(Expression<Func<UserEntity, bool>> exp, CancellationToken cancellationToken = default)
         {
-            return _mongoCollection.InsertOneAsync(userEntity);
+            return _mongoCollection.Find(exp).AnyAsync(cancellationToken: cancellationToken);
+        }
+
+        public Task CreateUserAsync(UserEntity userEntity, CancellationToken cancellationToken = default)
+        {
+            return _mongoCollection.InsertOneAsync(userEntity, cancellationToken: cancellationToken);
         }
     }
 }
