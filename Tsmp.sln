@@ -11,11 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BE45E3D8-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{621B72DF-FBF6-4F6F-8437-0792858DB63C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsmp.User.API", "src\Services\User\Tsmp.User.API\Tsmp.User.API.csproj", "{1D250920-3484-441F-BF74-C6A238FB861A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tsmp.User.API", "src\Services\User\Tsmp.User.API\Tsmp.User.API.csproj", "{1D250920-3484-441F-BF74-C6A238FB861A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsmp.User.Domain", "src\Services\User\Tsmp.User.Domain\Tsmp.User.Domain.csproj", "{CA69A9D0-E970-4DBE-A046-94787782352E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tsmp.User.Domain", "src\Services\User\Tsmp.User.Domain\Tsmp.User.Domain.csproj", "{CA69A9D0-E970-4DBE-A046-94787782352E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsmp.User.Infrastructure", "src\Services\User\Tsmp.User.Infrastructure\Tsmp.User.Infrastructure.csproj", "{2FAADB84-2E11-4D3D-9A7A-56DFB80E4AC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tsmp.User.Infrastructure", "src\Services\User\Tsmp.User.Infrastructure\Tsmp.User.Infrastructure.csproj", "{2FAADB84-2E11-4D3D-9A7A-56DFB80E4AC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post", "Post", "{56CA6F3B-BB71-4085-A276-BD26AF5805CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsmp.Post.Domain", "src\Services\Post\Tsmp.Post.Domain\Tsmp.Post.Domain.csproj", "{DEEF11A2-4BBE-4F38-9C46-BFC3CDF4C63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsmp.Post.Infrastructure", "src\Services\Post\Tsmp.Post.Infrastructure\Tsmp.Post.Infrastructure.csproj", "{FFD80001-9544-47EC-BFF1-92C292C961D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +41,14 @@ Global
 		{2FAADB84-2E11-4D3D-9A7A-56DFB80E4AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FAADB84-2E11-4D3D-9A7A-56DFB80E4AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FAADB84-2E11-4D3D-9A7A-56DFB80E4AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEEF11A2-4BBE-4F38-9C46-BFC3CDF4C63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEF11A2-4BBE-4F38-9C46-BFC3CDF4C63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEEF11A2-4BBE-4F38-9C46-BFC3CDF4C63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEEF11A2-4BBE-4F38-9C46-BFC3CDF4C63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD80001-9544-47EC-BFF1-92C292C961D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD80001-9544-47EC-BFF1-92C292C961D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD80001-9544-47EC-BFF1-92C292C961D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD80001-9544-47EC-BFF1-92C292C961D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +59,9 @@ Global
 		{1D250920-3484-441F-BF74-C6A238FB861A} = {621B72DF-FBF6-4F6F-8437-0792858DB63C}
 		{CA69A9D0-E970-4DBE-A046-94787782352E} = {621B72DF-FBF6-4F6F-8437-0792858DB63C}
 		{2FAADB84-2E11-4D3D-9A7A-56DFB80E4AC9} = {621B72DF-FBF6-4F6F-8437-0792858DB63C}
+		{56CA6F3B-BB71-4085-A276-BD26AF5805CE} = {373BE964-0826-4A63-9021-C49610AF1BC6}
+		{DEEF11A2-4BBE-4F38-9C46-BFC3CDF4C63D} = {56CA6F3B-BB71-4085-A276-BD26AF5805CE}
+		{FFD80001-9544-47EC-BFF1-92C292C961D8} = {56CA6F3B-BB71-4085-A276-BD26AF5805CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {373AE822-A88A-4791-A1DC-361DD6907F7D}
