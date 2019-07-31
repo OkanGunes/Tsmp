@@ -19,7 +19,7 @@ namespace Tsmp.User.API.Commands
 
                         if (isExist)
                         {
-                            context.AddFailure(nameof(UserEntity.Email), "Email is already registered");
+                            context.AddFailure(nameof(CreateUserCommand.Email), "Email is already registered");
                         }
                     });
                 });

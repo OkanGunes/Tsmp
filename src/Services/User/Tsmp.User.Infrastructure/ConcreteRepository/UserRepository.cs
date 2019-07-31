@@ -27,5 +27,10 @@ namespace Tsmp.User.Infrastructure
         {
             return _mongoCollection.InsertOneAsync(userEntity, cancellationToken: cancellationToken);
         }
+
+        public async Task<UserEntity> GetAsync(Expression<Func<UserEntity, bool>> exp, CancellationToken cancellationToken = default)
+        {
+            return await _mongoCollection.Find(exp).FirstOrDefaultAsync(cancellationToken: cancellationToken);
+        }
     }
 }

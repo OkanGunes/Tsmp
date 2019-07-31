@@ -10,5 +10,7 @@ namespace Tsmp.User.Domain
         Task CreateUserAsync(UserEntity userEntity, CancellationToken cancellationToken = default);
 
         Task<bool> AnyAsync(Expression<Func<UserEntity, bool>> exp, CancellationToken cancellationToken = default);
+
+        Task<UserEntity> GetAsync(Expression<Func<UserEntity, bool>> exp, CancellationToken cancellationToken = default);
     }
 }
